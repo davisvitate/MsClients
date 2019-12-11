@@ -4,12 +4,12 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import lombok.Getter;
-import lombok.Setter;
+//import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@Getter
-@Setter
+
+
 @Document(collection = "clients")
+//@JsonPropertyOrder({"id","name","lastname","dni","numcuentaahorro","cuentacredito"})
 public class Client {
 	@Id
 	private String id;

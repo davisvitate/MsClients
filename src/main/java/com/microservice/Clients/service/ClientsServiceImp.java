@@ -35,9 +35,9 @@ public class ClientsServiceImp implements ClientsServInterface{
 	}
 
 	@Override
-	public Mono<Void> delete(Client cli) {
+	public Mono<Void> delete(String id) {
 		
-		return clientrepositori.delete(cli);
+		return clientrepositori.deleteById(id);
 	}
 
 	
