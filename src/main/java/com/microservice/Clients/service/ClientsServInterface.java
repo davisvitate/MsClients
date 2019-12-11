@@ -7,6 +7,12 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public interface ClientsServInterface{
-	Flux<Client> getAll();
-	Mono<Client> getById(String id);
+	
+	public Flux<Client> findAll();
+	
+	public Mono<Client> findById(String id);
+	
+	public Mono<Client> save(Client cli);
+	
+	public Mono<Void> delete(Client cli);
 }

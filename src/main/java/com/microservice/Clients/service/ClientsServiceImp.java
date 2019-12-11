@@ -13,18 +13,33 @@ import reactor.core.publisher.Mono;
 public class ClientsServiceImp implements ClientsServInterface{
 
 	@Autowired
-	ClientRepoInterfaces clienterepositorio;
+	ClientRepoInterfaces clientrepositori;
 	
 	@Override
-	public Flux<Client> getAll() {
-		// TODO Auto-generated method stub
-		return  clienterepositorio.findAll();
+	public Flux<Client> findAll() {
+	
+		return  clientrepositori.findAll();
 	}
 
 	@Override
-	public Mono<Client> getById(String id) {
-		// TODO Auto-generated method stub
-		return clienterepositorio.findById(id);
+	public Mono<Client> findById(String id) {
+		
+		return clientrepositori.findById(id);
 	}
+
+
+	@Override
+	public Mono<Client> save(Client cli) {
+		
+		return clientrepositori.save(cli);
+	}
+
+	@Override
+	public Mono<Void> delete(Client cli) {
+		
+		return clientrepositori.delete(cli);
+	}
+
+	
 
 }

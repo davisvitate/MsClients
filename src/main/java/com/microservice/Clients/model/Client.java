@@ -19,6 +19,15 @@ public class Client {
 
 	@Field("lastname")
 	private String lastName;
+	
+	@Field("dni")
+	private String dni;
+	
+	@Field("numcuentaahorro")
+	private String numcuentaahorro;
+	
+	@Field("cuentacredito")
+	private String cuentacredito;
 
 	public String getId() {
 		return id;
@@ -43,6 +52,34 @@ public class Client {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	public String getNumcuentaahorro() {
+		return numcuentaahorro;
+	}
+
+	public void setNumcuentaahorro(String numcuentaahorro) {
+		this.numcuentaahorro = numcuentaahorro;
+	}
+
+	public String getCuentacredito() {
+		return cuentacredito;
+	}
+
+	public void setCuentacredito(String cuentacredito) {
+		this.cuentacredito = cuentacredito;
+	}
+	
+	
+	
+
 	
 	
 }
